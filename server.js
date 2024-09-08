@@ -1,13 +1,10 @@
 const http = require("http");
-require("dotengo").config();
-
-const server = http.createServer((req, res) => {
-  const { header, url, method } = req;
-  res.end;
-});
+require("dotenv").config();
+const router = require("./app");
+const server = http.createServer(router);
 
 const PORT = 3000;
 
-server.listen(PORT, () => {
-  console.log("listening on ${PORT}");
+server.listen(process.env.PORT, () => {
+  console.log(`listening on ${process.env.PORT}`);
 });
