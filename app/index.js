@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const router = require("./routes");
 
-const data = [];
 app.use(express.json());
 // localhost:3000/
 app.get("/", (req, res) => {

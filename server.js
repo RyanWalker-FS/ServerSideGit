@@ -3,8 +3,8 @@ require("dotenv").config();
 const router = require("./app");
 const server = http.createServer(router);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-server.listen(process.env.PORT, () => {
-  console.log(`listening on ${process.env.PORT}`);
+server.listen(PORT, () => {
+  console.log(`listening on ${PORT}`);
 });
